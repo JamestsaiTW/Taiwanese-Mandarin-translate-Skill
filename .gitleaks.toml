@@ -1,0 +1,12 @@
+title = "gitleaks config"
+
+# Start from gitleaks' built-in rule set, then layer project-specific allowlists on top.
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Ignore placeholder/example secret values while still scanning docs"
+regexes = [
+  '''(?i)\b(?:example|placeholder|dummy|sample)[-_ ]*(?:token|secret|password|api[_-]?key|credential)\b''',
+  '''(?i)\b(?:your|replace[-_ ]with[-_ ]your)[-_ ]*(?:token|secret|password|api[_-]?key|credential)\b''',
+]

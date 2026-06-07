@@ -1,4 +1,4 @@
-# Taiwanese Mandarin Translate Skill
+# 台灣華語翻譯 Skill（Taiwanese Mandarin Translate Skill）
 
 將英文翻譯成 **台灣使用的繁體中文**，並把既有中文文案改寫成更自然的 **台灣華語**。這個 skill 現在以 **Taiwanese Mandarin / 台灣華語** 作為預設語氣；若內容屬於正式或面向大眾的情境，則會適度借用 **ROC Mandarin / 中華民國國語** 所強調的清楚、標準化，以及適合公共溝通的表達方式。
 

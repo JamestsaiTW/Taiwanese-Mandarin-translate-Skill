@@ -87,3 +87,9 @@ node scripts/install-skill.mjs --uninstall --target all
 - `.agents/skills/taiwanese-mandarin-translate/references/vocabulary.md`：分類整理的台灣用語參考
 - `scripts/install-skill.mjs`：跨平台安裝程式
 - `package.json`：CLI 入口與 npm scripts
+
+## 參考資料
+
+- [Moksa1123/taiwan-translate-skill](https://github.com/Moksa1123/taiwan-translate-skill)：以台灣翻譯情境為主的 skill 參考
+- [Qmo37/localization-tw](https://github.com/Qmo37/localization-tw)：台灣在地化用語與措辭參考
+- [Wikipedia：中華民國國語](https://zh.wikipedia.org/wiki/%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E5%9C%8B%E8%AA%9E)：作為中華民國國語用法與語體背景參考

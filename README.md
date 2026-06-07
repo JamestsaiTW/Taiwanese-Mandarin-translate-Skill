@@ -87,3 +87,9 @@ Use this skill when you need to:
 - `.agents/skills/taiwanese-mandarin-translate/references/vocabulary.md`: categorized Taiwan terminology reference
 - `scripts/install-skill.mjs`: cross-platform installer
 - `package.json`: CLI entry points and npm scripts
+
+## References
+
+- [Moksa1123/taiwan-translate-skill](https://github.com/Moksa1123/taiwan-translate-skill): Taiwan-focused translation skill reference
+- [Qmo37/localization-tw](https://github.com/Qmo37/localization-tw): Taiwan localization terminology and wording reference
+- [Wikipedia: 中華民國國語](https://zh.wikipedia.org/wiki/%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E5%9C%8B%E8%AA%9E): background reference for ROC Mandarin usage and register

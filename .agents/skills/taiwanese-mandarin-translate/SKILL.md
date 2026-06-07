@@ -15,7 +15,7 @@ Use this skill when the task needs English content translated into **Traditional
 
 ## What this skill borrows from ROC Mandarin
 
-The Wikipedia definition is useful because it frames ROC Mandarin as a Taiwan-wide standard variety of Modern Standard Chinese and a common language across different groups in Taiwan. Use those strengths in practice:
+A widely used definition frames ROC Mandarin as a Taiwan-wide standard variety of Modern Standard Chinese and a common language across different groups in Taiwan. Use those strengths in practice:
 
 - Prefer wording that is **widely understandable across Taiwan**, not tied to one narrow subculture or imported PRC usage.
 - Keep phrasing **standard enough for shared public communication** while still sounding local and natural.

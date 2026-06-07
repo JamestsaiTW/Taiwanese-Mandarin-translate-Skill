@@ -154,7 +154,9 @@ function formatDoneLabel(uninstall) {
 function printSharedPathNotes(target, uninstall) {
   if (target === "codex") {
     console.warn(
-      `Note: codex installs to the shared Agent Skills path: ${sharedAgentSkillDir}. Other tools may also discover that copy.`
+      uninstall
+        ? `Note: codex uses the shared Agent Skills path: ${sharedAgentSkillDir}. Other tools may still discover a copy if it remains.`
+        : `Note: codex installs to the shared Agent Skills path: ${sharedAgentSkillDir}. Other tools may also discover that copy.`
     );
     return;
   }

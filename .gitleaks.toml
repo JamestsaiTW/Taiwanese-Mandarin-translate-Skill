@@ -1,0 +1,14 @@
+title = "gitleaks config"
+
+# Start from gitleaks' built-in rule set, then layer project-specific allowlists on top.
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Ignore example/placeholder strings in skill docs and READMEs"
+paths = [
+  '''\.agents/skills/.*/EXAMPLES\.md''',
+  '''\.agents/skills/.*/SKILL\.md''',
+  '''\.agents/skills/.*/references/.*\.md''',
+  '''README.*\.md''',
+]

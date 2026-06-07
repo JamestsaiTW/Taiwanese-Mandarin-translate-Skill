@@ -3,7 +3,7 @@ name: taiwanese-mandarin-translate
 description: Translate English into Traditional Chinese for Taiwan audiences, using natural Taiwanese Mandarin by default and a neutral ROC Mandarin register when the context is formal or public-facing.
 ---
 
-# Taiwan Mandarin Translation and Localization
+# Taiwanese Mandarin Translation and Localization
 
 Use this skill when the task needs English content translated into **Traditional Chinese used in Taiwan**, or when existing Chinese copy should be rewritten into more natural **Taiwanese Mandarin**.
 

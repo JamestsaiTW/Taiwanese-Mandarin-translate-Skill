@@ -1,16 +1,52 @@
 {
   "name": "taiwanese-mandarin-translate-skill",
   "version": "0.1.0",
-  "private": true,
   "description": "Taiwan Mandarin translation skill with installers for Claude, Codex, Gemini, and GitHub Copilot.",
   "type": "module",
   "bin": {
-    "taiwanese-mandarin-translate-skill": "./scripts/install-skill.mjs"
+    "taiwanese-mandarin-translate-skill": "scripts/install-skill.mjs",
+    "taiwanese-mandarin-translate": "scripts/install-skill.mjs"
+  },
+  "files": [
+    ".agents/skills/taiwanese-mandarin-translate",
+    "scripts/install-skill.mjs",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "install:skill": "node ./scripts/install-skill.mjs",
     "install:all": "node ./scripts/install-skill.mjs --target all",
     "uninstall:skill": "node ./scripts/install-skill.mjs --uninstall --target all",
-    "smoke-test": "node ./scripts/install-skill.mjs --target all --dry-run"
+    "smoke-test": "node ./scripts/install-skill.mjs --target all --dry-run",
+    "prepublishOnly": "npm run smoke-test"
+  },
+  "keywords": [
+    "taiwan",
+    "taiwanese-mandarin",
+    "traditional-chinese",
+    "translation",
+    "localization",
+    "zh-tw",
+    "copilot",
+    "claude",
+    "gemini",
+    "ai-skill"
+  ],
+  "author": "James Tsai",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamestsaiTW/Taiwanese-Mandarin-translate-Skill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JamestsaiTW/Taiwanese-Mandarin-translate-Skill/issues"
+  },
+  "homepage": "https://github.com/JamestsaiTW/Taiwanese-Mandarin-translate-Skill#readme",
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

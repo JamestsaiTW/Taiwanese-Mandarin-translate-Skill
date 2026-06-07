@@ -44,12 +44,24 @@
 需要 Node.js 18 以上版本。
 
 ```bash
-npm run install:all
+npx taiwanese-mandarin-translate-skill
 ```
 
-安裝到單一平台：
+預設指令會把 skill 安裝到所有支援的平台。也支援 `init` 別名，讓 npm 使用方式更接近 `taiwan-translate-skill` 這類套件。
+
+若只安裝到單一平台，可直接用 `npx`：
 
 ```bash
+npx taiwanese-mandarin-translate-skill init --target claude
+npx taiwanese-mandarin-translate-skill init --target codex
+npx taiwanese-mandarin-translate-skill init --target gemini
+npx taiwanese-mandarin-translate-skill init --target copilot
+```
+
+從本機 clone 安裝：
+
+```bash
+npm run install:all
 node scripts/install-skill.mjs --target claude
 node scripts/install-skill.mjs --target codex
 node scripts/install-skill.mjs --target gemini
@@ -71,6 +83,7 @@ node scripts/install-skill.mjs --target all --dry-run
 移除已安裝的副本：
 
 ```bash
+npx taiwanese-mandarin-translate-skill uninstall --target all
 node scripts/install-skill.mjs --uninstall --target all
 ```
 

@@ -4,7 +4,7 @@
 
 <p><strong>Taiwanese Mandarin Translate Skill</strong></p>
 
-<p>為 AI 程式助手提供專業的台灣在地化翻譯能力</p>
+<p>為 AI 提供專業的台灣在地化翻譯能力</p>
 
 <p>
   <a href="https://github.com/JamestsaiTW/Taiwanese-Mandarin-translate-Skill"><img src="https://img.shields.io/badge/version-0.1.0-2962FF?style=flat-square" alt="version" /></a>
@@ -130,4 +130,4 @@ node scripts/install-skill.mjs --uninstall --target all
 
 - [Moksa1123/taiwan-translate-skill](https://github.com/Moksa1123/taiwan-translate-skill)：以台灣翻譯情境為主的 skill 參考
 - [Qmo37/localization-tw](https://github.com/Qmo37/localization-tw)：台灣在地化用語與措辭參考
-- [Wikipedia：中華民國國語](https://zh.wikipedia.org/wiki/%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E5%9C%8B%E8%AA%9E)：作為中華民國國語用法與語體背景參考
+- [Wikipedia：中華民國國語](https://zh.wikipedia.org/wiki/%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E5%9C%8B%E8%AA%9E)：作為中華民國國語用法與語體背景參考

@@ -1,4 +1,4 @@
-# Taiwanese Mandarin Translate Skill
+# 台灣華語翻譯 Skill（Taiwanese Mandarin Translate Skill）
 
 English: [README.md](README.md)
 

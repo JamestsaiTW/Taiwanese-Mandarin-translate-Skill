@@ -44,12 +44,24 @@ This structure works directly with tools that support project-level `.agents/ski
 Node.js 18 or later is required.
 
 ```bash
-npm run install:all
+npx taiwanese-mandarin-translate-skill
 ```
 
-Install to a single platform:
+The default command installs the skill to all supported targets. `init` is also accepted as an alias, mirroring the npm-first workflow used by packages such as `taiwan-translate-skill`.
+
+Install to a single platform with `npx`:
 
 ```bash
+npx taiwanese-mandarin-translate-skill init --target claude
+npx taiwanese-mandarin-translate-skill init --target codex
+npx taiwanese-mandarin-translate-skill init --target gemini
+npx taiwanese-mandarin-translate-skill init --target copilot
+```
+
+Install from a local clone:
+
+```bash
+npm run install:all
 node scripts/install-skill.mjs --target claude
 node scripts/install-skill.mjs --target codex
 node scripts/install-skill.mjs --target gemini
@@ -71,6 +83,7 @@ node scripts/install-skill.mjs --target all --dry-run
 To remove installed copies:
 
 ```bash
+npx taiwanese-mandarin-translate-skill uninstall --target all
 node scripts/install-skill.mjs --uninstall --target all
 ```
 

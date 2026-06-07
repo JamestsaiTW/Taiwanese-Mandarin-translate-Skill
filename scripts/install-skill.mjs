@@ -28,8 +28,35 @@ function parseArgs(argv) {
     help: false
   };
 
+  let commandSet = false;
+
   for (let index = 0; index < argv.length; index += 1) {
     const arg = argv[index];
+
+    if (!arg.startsWith("-")) {
+      if (commandSet) {
+        throw new Error(`Unexpected positional argument: ${arg}`);
+      }
+
+      if (arg === "install" || arg === "init") {
+        commandSet = true;
+        continue;
+      }
+
+      if (arg === "uninstall" || arg === "remove") {
+        options.uninstall = true;
+        commandSet = true;
+        continue;
+      }
+
+      if (arg === "help") {
+        options.help = true;
+        commandSet = true;
+        continue;
+      }
+
+      throw new Error(`Unknown command: ${arg}`);
+    }
 
     if (arg === "--target" || arg === "-t") {
       const nextValue = argv[index + 1];
@@ -48,11 +75,13 @@ function parseArgs(argv) {
 
     if (arg === "--uninstall") {
       options.uninstall = true;
+      commandSet = true;
       continue;
     }
 
     if (arg === "--help" || arg === "-h") {
       options.help = true;
+      commandSet = true;
       continue;
     }
 
@@ -68,8 +97,10 @@ function printHelp() {
       "Install or remove the Taiwan Mandarin translation skill.",
       "",
       "Usage:",
-      "  node scripts/install-skill.mjs --target <claude|codex|gemini|copilot|all> [--dry-run]",
-      "  node scripts/install-skill.mjs --uninstall --target <claude|codex|gemini|copilot|all> [--dry-run]"
+      "  npx taiwanese-mandarin-translate-skill [install|init] [--target <claude|codex|gemini|copilot|all>] [--dry-run]",
+      "  npx taiwanese-mandarin-translate-skill uninstall [--target <claude|codex|gemini|copilot|all>] [--dry-run]",
+      "  node scripts/install-skill.mjs [install|init] [--target <claude|codex|gemini|copilot|all>] [--dry-run]",
+      "  node scripts/install-skill.mjs uninstall [--target <claude|codex|gemini|copilot|all>] [--dry-run]"
     ].join("\n")
   );
 }

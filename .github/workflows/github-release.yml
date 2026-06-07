@@ -1,0 +1,77 @@
+name: GitHub release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag, for example v0.1.0. Leave blank to use v<package.json version>."
+        required: false
+      target:
+        description: "Branch or commit SHA to tag when creating a manual release. Leave blank to use the workflow run commit."
+        required: false
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+        with:
+          fetch-depth: 0
+
+      - name: Resolve release metadata
+        id: meta
+        shell: bash
+        run: |
+          if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]; then
+            TAG="${{ github.event.inputs.tag }}"
+            if [[ -z "$TAG" ]]; then
+              VERSION=$(grep -m1 '"version"' package.json | sed -E 's/.*"version": "([^"]+)".*/\1/')
+              TAG="v$VERSION"
+            fi
+            TARGET="${{ github.event.inputs.target }}"
+            if [[ -z "$TARGET" ]]; then
+              TARGET="${GITHUB_SHA}"
+            fi
+          else
+            TAG="${GITHUB_REF_NAME}"
+            TARGET="${GITHUB_SHA}"
+          fi
+
+          VERSION="${TAG#v}"
+
+          {
+            echo "tag=$TAG"
+            echo "version=$VERSION"
+            echo "target=$TARGET"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.meta.outputs.tag }}
+          TARGET: ${{ steps.meta.outputs.target }}
+          VERSION: ${{ steps.meta.outputs.version }}
+        shell: bash
+        run: |
+          if gh release view "$TAG" > /dev/null 2>&1; then
+            echo "Release $TAG already exists."
+            exit 0
+          fi
+
+          NOTES=$(printf '%s\n' \
+            '## Package' \
+            '- npm: https://www.npmjs.com/package/taiwanese-mandarin-translate-skill' \
+            '' \
+            '## Version' \
+            "- npm package version: $VERSION")
+
+          gh release create "$TAG" \
+            --title "$TAG" \
+            --target "$TARGET" \
+            --notes "$NOTES"

@@ -103,6 +103,22 @@ Use this skill when you need to:
 - `scripts/install-skill.mjs`: cross-platform installer
 - `package.json`: CLI entry points and npm scripts
 
+## GitHub Release automation
+
+This repository includes `.github/workflows/github-release.yml` to create GitHub Releases automatically.
+
+- Push a version tag such as `v0.1.0` and GitHub Actions will create the matching Release.
+- If the package is already published to npm but the GitHub Release does not exist yet, open **Actions > GitHub release > Run workflow** to backfill it manually.
+- For a manual run, enter a tag such as `v0.1.0`, or leave it blank to use the version from `package.json` and create `v<version>`.
+
+Recommended release flow:
+
+```bash
+npm publish
+git tag v0.1.0
+git push origin v0.1.0
+```
+
 ## References
 
 - [Moksa1123/taiwan-translate-skill](https://github.com/Moksa1123/taiwan-translate-skill): Taiwan-focused translation skill reference

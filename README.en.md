@@ -1,12 +1,33 @@
-# Taiwanese Mandarin Translate Skill（台灣華語翻譯 Skill）
+<div align="center">
 
-[繁體中文](README.md) | [English](README.en.md)
+<h1>Taiwanese Mandarin Translate Skill</h1>
+
+<p><strong>台灣華語翻譯 Skill</strong></p>
+
+<p>Professional Taiwan-focused localization for AI coding assistants</p>
+
+<p>
+  <a href="https://github.com/JamestsaiTW/Taiwanese-Mandarin-translate-Skill"><img src="https://img.shields.io/badge/version-0.1.0-2962FF?style=flat-square" alt="version" /></a>
+  <a href="https://nodejs.org"><img src="https://img.shields.io/badge/node-%3E%3D18.0.0-339933?style=flat-square&logo=node.js&logoColor=white" alt="node" /></a>
+  <a href="#supported-platforms"><img src="https://img.shields.io/badge/platforms-4-orange?style=flat-square" alt="platforms" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="license" /></a>
+</p>
+
+<p><a href="README.md">繁體中文</a> | <a href="README.en.md">English</a> | <a href="LICENSE">MIT License</a></p>
+
+<p><a href="#quick-start">Quick start</a> | <a href="#highlights">Highlights</a> | <a href="#supported-platforms">Supported platforms</a> | <a href="#repository-structure">Repository structure</a></p>
+
+</div>
+
+---
 
 > Translate English into Traditional Chinese for Taiwan audiences, and localize Chinese wording into natural Taiwanese Mandarin.
 
 Translate English into **Traditional Chinese used in Taiwan**, and rewrite existing Chinese copy into more natural **Taiwanese Mandarin**. This skill now uses **Taiwanese Mandarin** as its default voice. For official or broad public-facing content, it can also lean into a more neutral **ROC Mandarin** written register for clarity and standardization.
 
 This repository packages the skill in a cross-platform structure and includes a small installer that can deploy it to the following targets:
+
+## Supported platforms
 
 | Platform | Target name | User install path |
 | --- | --- | --- |
@@ -16,6 +37,8 @@ This repository packages the skill in a cross-platform structure and includes a 
 | GitHub Copilot | `copilot` | `~/.copilot/skills/taiwanese-mandarin-translate/` |
 
 Here, `~` is the Unix-style home directory shorthand. On each platform, it resolves to your OS user's home directory, such as `%USERPROFILE%` on Windows.
+
+---
 
 ## Highlights
 

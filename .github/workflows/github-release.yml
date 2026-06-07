@@ -74,5 +74,4 @@ jobs:
           gh release create "$TAG" \
             --title "$TAG" \
             --target "$TARGET" \
-            --notes "$NOTES" \
-            --generate-notes
+            --notes "$NOTES"

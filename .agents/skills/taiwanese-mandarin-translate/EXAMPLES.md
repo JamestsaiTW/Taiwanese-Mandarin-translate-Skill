@@ -2,6 +2,15 @@
 
 These examples show the default style this skill should aim for.
 
+## Default vs. formal public-facing register
+
+| Context | Source | Preferred translation |
+| --- | --- | --- |
+| default Taiwanese Mandarin | Taiwan is a multilingual society. | 台灣是多語言社會。 |
+| more neutral public-facing register | Taiwan is a multilingual society. | 臺灣是多語言社會。 |
+| default Taiwanese Mandarin | This guide is written for readers in Taiwan. | 這份指南是為台灣讀者撰寫的。 |
+| more neutral public-facing register | This guide is written for readers in Taiwan. | 本指南為臺灣讀者撰寫。 |
+
 ## UI copy
 
 | Source | Preferred translation |
@@ -25,6 +34,14 @@ These examples show the default style this skill should aim for.
 | Please enter a valid email address. | 請輸入有效的電子郵件地址。 |
 | Update the configuration file before restarting the app. | 重新啟動應用程式前，請先更新設定檔。 |
 | Click the link below to continue. | 請點選下方連結以繼續。 |
+
+## Shared Taiwan standard wording
+
+| Source | Preferred translation |
+| --- | --- |
+| Use wording that is widely understood in Taiwan. | 請使用在台灣普遍容易理解的說法。 |
+| This notice is intended for the general public. | 本通知適用於一般大眾。 |
+| Keep the language clear and neutral. | 請保持語句清楚、中性。 |
 
 ## Rewriting China-leaning wording into Taiwan Mandarin
 

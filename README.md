@@ -11,6 +11,8 @@ This repository now packages the skill in a cross-platform layout and includes a
 | Gemini CLI | `gemini` | `~/.gemini/skills/taiwanese-mandarin-translate/` |
 | GitHub Copilot | `copilot` | `~/.copilot/skills/taiwanese-mandarin-translate/` |
 
+`~` is shown as a Unix-style shorthand; on every platform these paths resolve under your OS user home directory (for example, `%USERPROFILE%` on Windows).
+
 ## What this skill emphasizes
 
 - Taiwan-preferred terminology for software, UI, and technical writing

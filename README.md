@@ -1,19 +1,21 @@
 <div align="center">
 
-# 台灣華語翻譯 Skill
+<h1>台灣華語翻譯 Skill</h1>
 
-**Taiwanese Mandarin Translate Skill**
+<p><strong>Taiwanese Mandarin Translate Skill</strong></p>
 
-為 AI 程式助手提供專業的台灣在地化翻譯能力
+<p>為 AI 程式助手提供專業的台灣在地化翻譯能力</p>
 
-[![version](https://img.shields.io/badge/version-0.1.0-2962FF?style=flat-square)](https://github.com/JamestsaiTW/Taiwanese-Mandarin-translate-Skill)
-[![node](https://img.shields.io/badge/node-%3E%3D18.0.0-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org)
-[![platforms](https://img.shields.io/badge/platforms-4-orange?style=flat-square)](#支援平台)
-[![license](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
+<p>
+  <a href="https://github.com/JamestsaiTW/Taiwanese-Mandarin-translate-Skill"><img src="https://img.shields.io/badge/version-0.1.0-2962FF?style=flat-square" alt="version" /></a>
+  <a href="https://nodejs.org"><img src="https://img.shields.io/badge/node-%3E%3D18.0.0-339933?style=flat-square&logo=node.js&logoColor=white" alt="node" /></a>
+  <a href="#支援平台"><img src="https://img.shields.io/badge/platforms-4-orange?style=flat-square" alt="platforms" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="license" /></a>
+</p>
 
-[繁體中文](README.md) | [English](README.en.md) | [MIT License](LICENSE)
+<p><a href="README.md">繁體中文</a> | <a href="README.en.md">English</a> | <a href="LICENSE">MIT License</a></p>
 
-[快速開始](#快速開始) | [重點特色](#重點特色) | [支援平台](#支援平台) | [儲存庫結構](#儲存庫結構)
+<p><a href="#快速開始">快速開始</a> | <a href="#重點特色">重點特色</a> | <a href="#支援平台">支援平台</a> | <a href="#儲存庫結構">儲存庫結構</a></p>
 
 </div>
 

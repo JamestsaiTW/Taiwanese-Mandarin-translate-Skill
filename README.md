@@ -1,4 +1,4 @@
-# 台灣華語翻譯 Skill（Taiwanese Mandarin Translate Skill）
+# Taiwanese Mandarin Translate Skill（台灣華語翻譯 Skill）
 
 繁體中文（台灣）：[README.zh-TW.md](README.zh-TW.md)
 

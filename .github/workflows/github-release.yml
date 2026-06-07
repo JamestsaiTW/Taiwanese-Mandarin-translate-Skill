@@ -12,6 +12,9 @@ on:
       target:
         description: "Branch or commit SHA to tag and publish when creating a manual release. Leave blank to use the workflow run commit."
         required: false
+      npm_otp:
+        description: "Optional npm one-time password for accounts enforcing 2FA on publish."
+        required: false
 
 permissions:
   contents: write
@@ -84,6 +87,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           PACKAGE_NAME: ${{ steps.meta.outputs.package_name }}
           PACKAGE_VERSION: ${{ steps.meta.outputs.package_version }}
+          NPM_OTP: ${{ github.event.inputs.npm_otp }}
         shell: bash
         run: |
           if [[ -z "${NODE_AUTH_TOKEN}" ]]; then
@@ -96,7 +100,17 @@ jobs:
             exit 0
           fi
 
-          npm publish
+          PUBLISH_ARGS=()
+          if [[ -n "${NPM_OTP}" ]]; then
+            PUBLISH_ARGS+=(--otp "$NPM_OTP")
+          fi
+
+          if ! npm publish "${PUBLISH_ARGS[@]}"; then
+            if [[ -z "${NPM_OTP}" ]]; then
+              echo "npm publish failed. If npm account 2FA is enabled for publish, rerun workflow_dispatch and provide npm_otp." >&2
+            fi
+            exit 1
+          fi
 
       - name: Create GitHub release
         env:

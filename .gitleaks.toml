@@ -5,10 +5,8 @@ title = "gitleaks config"
 useDefault = true
 
 [[allowlists]]
-description = "Ignore example/placeholder strings in skill docs and READMEs"
-paths = [
-  '''\.agents/skills/.*/EXAMPLES\.md''',
-  '''\.agents/skills/.*/SKILL\.md''',
-  '''\.agents/skills/.*/references/.*\.md''',
-  '''README.*\.md''',
+description = "Ignore placeholder/example secret values while still scanning docs"
+regexes = [
+  '''(?i)\b(?:example|placeholder|dummy|sample)[-_ ]*(?:token|secret|password|api[_-]?key|credential)\b''',
+  '''(?i)\b(?:your|replace[-_ ]with[-_ ]your)[-_ ]*(?:token|secret|password|api[_-]?key|credential)\b''',
 ]

@@ -1,0 +1,16 @@
+{
+  "name": "taiwanese-mandarin-translate-skill",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Taiwan Mandarin translation skill with installers for Claude, Codex, Gemini, and GitHub Copilot.",
+  "type": "module",
+  "bin": {
+    "taiwanese-mandarin-translate-skill": "./scripts/install-skill.mjs"
+  },
+  "scripts": {
+    "install:skill": "node ./scripts/install-skill.mjs",
+    "install:all": "node ./scripts/install-skill.mjs --target all",
+    "uninstall:skill": "node ./scripts/install-skill.mjs --uninstall --target all",
+    "smoke-test": "node ./scripts/install-skill.mjs --target all --dry-run"
+  }
+}

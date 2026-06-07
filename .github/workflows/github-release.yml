@@ -41,8 +41,9 @@ jobs:
           echo "target=$TARGET" >> "$GITHUB_OUTPUT"
 
       - name: Check out release target
-        shell: bash
-        run: git checkout --detach "${{ steps.target.outputs.target }}"
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+        with:
+          ref: ${{ steps.target.outputs.target }}
 
       - name: Resolve package metadata
         id: meta

@@ -103,22 +103,6 @@ node scripts/install-skill.mjs --uninstall --target all
 - `scripts/install-skill.mjs`：跨平台安裝程式
 - `package.json`：CLI 入口與 npm scripts
 
-## GitHub Release 自動化
-
-這個儲存庫包含 `.github/workflows/github-release.yml`，可自動建立 GitHub Release。
-
-- 推送版本 tag（例如 `v0.1.0`）到 GitHub 後，Actions 會自動建立對應的 Release。
-- 若 npm 已經先發布、但 GitHub Release 還沒建立，可到 **Actions > GitHub release > Run workflow** 手動補發。
-- 手動執行時可直接填 `v0.1.0`，或留空讓 workflow 讀取 `package.json` 的版本並建立 `v<version>`。
-
-建議發版流程：
-
-```bash
-npm publish
-git tag v0.1.0
-git push origin v0.1.0
-```
-
 ## 參考資料
 
 - [Moksa1123/taiwan-translate-skill](https://github.com/Moksa1123/taiwan-translate-skill)：以台灣翻譯情境為主的 skill 參考

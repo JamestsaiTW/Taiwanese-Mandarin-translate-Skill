@@ -95,7 +95,7 @@ Pick the register that best matches the task:
 | app UI, product copy, help center, blog, marketing | natural Taiwanese Mandarin |
 | technical docs, developer guides, FAQs | Taiwanese Mandarin with consistent standard terminology |
 | government-style notices, education, policy, public announcements | Taiwanese Mandarin phrasing with a more neutral ROC Mandarin written register |
-| pronunciation, dictionary, or teaching materials | Taiwan education conventions, including MOE terminology when relevant |
+| pronunciation, dictionary, or teaching materials | Taiwan education conventions, including Ministry of Education (MOE) terminology when relevant |
 
 ## Translation workflow
 

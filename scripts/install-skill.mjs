@@ -22,7 +22,6 @@ const sharedAgentSkillDir = path.join(targetRoots.codex, skillName);
 
 function parseArgs(argv) {
   const options = {
-    command: "install",
     target: "all",
     dryRun: false,
     uninstall: false,
@@ -40,20 +39,17 @@ function parseArgs(argv) {
       }
 
       if (arg === "install" || arg === "init") {
-        options.command = "install";
         commandSet = true;
         continue;
       }
 
       if (arg === "uninstall" || arg === "remove") {
-        options.command = "uninstall";
         options.uninstall = true;
         commandSet = true;
         continue;
       }
 
       if (arg === "help") {
-        options.command = "help";
         options.help = true;
         commandSet = true;
         continue;
@@ -78,14 +74,12 @@ function parseArgs(argv) {
     }
 
     if (arg === "--uninstall") {
-      options.command = "uninstall";
       options.uninstall = true;
       commandSet = true;
       continue;
     }
 
     if (arg === "--help" || arg === "-h") {
-      options.command = "help";
       options.help = true;
       commandSet = true;
       continue;

@@ -7,7 +7,7 @@
 <p>Professional Taiwan-focused localization for AI coding assistants</p>
 
 <p>
-  <a href="https://github.com/JamestsaiTW/Taiwanese-Mandarin-translate-Skill"><img src="https://img.shields.io/badge/version-0.1.0-2962FF?style=flat-square" alt="version" /></a>
+  <a href="https://github.com/JamestsaiTW/Taiwanese-Mandarin-translate-Skill"><img src="https://img.shields.io/badge/version-0.1.1-2962FF?style=flat-square" alt="version" /></a>
   <a href="https://nodejs.org"><img src="https://img.shields.io/badge/node-%3E%3D18.0.0-339933?style=flat-square&logo=node.js&logoColor=white" alt="node" /></a>
   <a href="#supported-platforms"><img src="https://img.shields.io/badge/platforms-4-orange?style=flat-square" alt="platforms" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="license" /></a>

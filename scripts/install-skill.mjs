@@ -173,7 +173,7 @@ function printSharedPathNotes(target, uninstall) {
   }
 
   console.warn(
-    `Note: a shared Agent Skills copy already exists at ${sharedAgentSkillDir}. Gemini may continue to prefer that copy until it is updated too.`
+    `Note: a shared Agent Skills copy already exists at ${sharedAgentSkillDir}. Gemini may prefer that copy when it exists; update it too if you want Gemini to use the latest version.`
   );
 }
 

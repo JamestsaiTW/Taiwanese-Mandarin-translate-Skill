@@ -1,6 +1,8 @@
 # Taiwanese Mandarin Translate Skill（台灣華語翻譯 Skill）
 
-繁體中文（台灣）：[README.zh-TW.md](README.zh-TW.md)
+[繁體中文](README.md) | [English](README.en.md)
+
+> Translate English into Traditional Chinese for Taiwan audiences, and localize Chinese wording into natural Taiwanese Mandarin.
 
 Translate English into **Traditional Chinese used in Taiwan**, and rewrite existing Chinese copy into more natural **Taiwanese Mandarin**. This skill now uses **Taiwanese Mandarin** as its default voice. For official or broad public-facing content, it can also lean into a more neutral **ROC Mandarin** written register for clarity and standardization.
 

@@ -5,7 +5,7 @@ Translate English into Traditional Chinese with wording that is natural for Taiw
 ## Files
 
 - `SKILL.md`: Copilot skill definition and translation guidance
-- `README.md`: basic usage notes
+- `README.md`: Basic usage notes
 
 ## Usage
 

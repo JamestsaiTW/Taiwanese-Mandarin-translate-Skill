@@ -39,7 +39,7 @@ The standard file layout for this skill is:
 
 This structure works directly with tools that support project-level `.agents/skills`, and the installer copies the same files into each tool's user-level skill directory.
 
-## Installation
+## Quick start
 
 Node.js 18 or later is required.
 

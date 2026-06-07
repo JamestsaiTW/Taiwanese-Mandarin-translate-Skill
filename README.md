@@ -1,12 +1,31 @@
-# 台灣華語翻譯 Skill（Taiwanese Mandarin Translate Skill）
+<div align="center">
 
-[繁體中文](README.md) | [English](README.en.md)
+# 台灣華語翻譯 Skill
+
+**Taiwanese Mandarin Translate Skill**
+
+為 AI 程式助手提供專業的台灣在地化翻譯能力
+
+[![version](https://img.shields.io/badge/version-0.1.0-2962FF?style=flat-square)](https://github.com/JamestsaiTW/Taiwanese-Mandarin-translate-Skill)
+[![node](https://img.shields.io/badge/node-%3E%3D18.0.0-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org)
+[![platforms](https://img.shields.io/badge/platforms-4-orange?style=flat-square)](#支援平台)
+[![license](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
+
+[繁體中文](README.md) | [English](README.en.md) | [MIT License](LICENSE)
+
+[快速開始](#快速開始) | [重點特色](#重點特色) | [支援平台](#支援平台) | [儲存庫結構](#儲存庫結構)
+
+</div>
+
+---
 
 > 將英文翻譯成適合台灣讀者的繁體中文，並把中文文案在地化成自然的台灣華語。
 
 將英文翻譯成 **台灣使用的繁體中文**，並把既有中文文案改寫成更自然的 **台灣華語**。這個 skill 目前以 **台灣華語** 作為預設語氣；若內容屬於正式或面向大眾的情境，則會適度借用 **中華民國國語** 書面語所強調的清楚、標準化，以及適合公共溝通的表達方式。
 
 這個儲存庫目前以跨平台的結構封裝這個 skill，並附上一個小型安裝程式，可安裝到以下目標：
+
+## 支援平台
 
 | 平台 | 目標名稱 | 使用者安裝路徑 |
 | --- | --- | --- |
@@ -17,7 +36,9 @@
 
 這裡的 `~` 是 Unix 風格的縮寫；在各平台上，這些路徑都會解析到你作業系統的使用者家目錄下，例如 Windows 的 `%USERPROFILE%`。
 
-## 這個 skill 的重點
+---
+
+## 重點特色
 
 - 採用台灣偏好的軟體、UI 與技術文件用語
 - 能辨識並改寫偏中國用法的措辭，調整成台灣常用說法
@@ -39,7 +60,7 @@
 
 這個結構可直接用於支援專案層級 `.agents/skills` 的工具，而安裝程式也會把相同檔案複製到各工具的使用者層級 skill 目錄。
 
-## 安裝
+## 快速開始
 
 需要 Node.js 18 以上版本。
 
@@ -107,4 +128,4 @@ node scripts/install-skill.mjs --uninstall --target all
 
 - [Moksa1123/taiwan-translate-skill](https://github.com/Moksa1123/taiwan-translate-skill)：以台灣翻譯情境為主的 skill 參考
 - [Qmo37/localization-tw](https://github.com/Qmo37/localization-tw)：台灣在地化用語與措辭參考
-- [Wikipedia：中華民國國語](https://zh.wikipedia.org/wiki/%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E5%9C%8B%E8%AA%9E)：作為中華民國國語用法與語體背景參考
+- [Wikipedia：中華民國國語](https://zh.wikipedia.org/wiki/%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E5%9C%8B%E8%AA%9E)：作為中華民國國語用法與語體背景參考

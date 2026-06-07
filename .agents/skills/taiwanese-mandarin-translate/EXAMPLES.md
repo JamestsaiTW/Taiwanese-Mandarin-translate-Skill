@@ -9,7 +9,7 @@ These examples show the default style this skill should aim for.
 | default Taiwanese Mandarin | Taiwan is a multilingual society. | 台灣是多語言社會。 |
 | more neutral public-facing register | Taiwan is a multilingual society. | 臺灣是多語言社會。 |
 | default Taiwanese Mandarin | This guide is written for readers in Taiwan. | 這份指南是為台灣讀者撰寫的。 |
-| more neutral public-facing register | This guide is written for readers in Taiwan. | 本指南係為臺灣讀者撰寫。 |
+| more neutral public-facing register | This guide is written for readers in Taiwan. | 本指南為臺灣讀者撰寫。 |
 
 ## UI copy
 

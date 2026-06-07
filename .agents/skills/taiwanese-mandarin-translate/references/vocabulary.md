@@ -2,6 +2,15 @@
 
 Use this file as a quick terminology reference when translating UI copy, documentation, and software-related text into Traditional Chinese for Taiwan readers.
 
+## Register guidance
+
+| Situation | Default choice |
+| --- | --- |
+| everyday product and documentation writing | 台灣華語優先，求自然、清楚、順口 |
+| broad public-facing or formal text | 在台灣華語基礎上，往中性、標準的中華民國國語書面語靠攏 |
+| government or education context mentioning Taiwan | 優先留意「臺／台」與正式語體的一致性 |
+| pronunciation or language-learning content | 優先採用台灣教育體系常見的術語與表示法 |
+
 ## Common Taiwan-preferred terminology
 
 | English | Prefer in Taiwan |
@@ -78,6 +87,7 @@ Use this file as a quick terminology reference when translating UI copy, documen
 ## Style reminders
 
 - Prefer concise, natural Taiwan Mandarin over literal translation.
+- Treat Taiwanese Mandarin as the default voice, and use ROC Mandarin mainly as a neutral written register for formal Taiwan contexts.
 - Use full-width punctuation in prose.
 - Preserve English for brands, product names, APIs, commands, code, file paths, and placeholders unless asked otherwise.
 - Keep terminology consistent across the whole output.

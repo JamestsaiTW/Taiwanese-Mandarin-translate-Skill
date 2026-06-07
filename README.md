@@ -1,6 +1,6 @@
 # Taiwanese Mandarin Translate Skill
 
-Translate English into **Traditional Chinese used in Taiwan**, and rewrite existing Chinese copy into more natural **Taiwan Mandarin**.
+Translate English into **Traditional Chinese used in Taiwan**, and rewrite existing Chinese copy into more natural **Taiwanese Mandarin**. The skill now treats **Taiwanese Mandarin / 台灣華語** as the default voice, and borrows the **clarity, standardization, and broad public intelligibility** associated with **ROC Mandarin / 中華民國國語** when the context is formal or public-facing.
 
 This repository now packages the skill in a cross-platform layout and includes a small installer for these targets:
 
@@ -17,6 +17,8 @@ This repository now packages the skill in a cross-platform layout and includes a
 
 - Taiwan-preferred terminology for software, UI, and technical writing
 - Detection and rewriting of China-leaning wording into Taiwan usage
+- Taiwanese Mandarin as the default style, with a neutral ROC Mandarin register available for formal Taiwan contexts
+- Wording that stays broadly understandable across Taiwan as a shared public register
 - A clear workflow: understand → translate → proofread → polish
 - Preservation of Markdown, placeholders, code, commands, and structure
 

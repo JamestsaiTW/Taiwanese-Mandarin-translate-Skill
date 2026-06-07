@@ -10,8 +10,9 @@ on:
         description: "Release tag, for example v0.1.0. Leave blank to use v<package.json version>."
         required: false
       target:
-        description: "Branch or commit SHA to tag when creating a manual release. Leave blank to use the workflow run commit."
+        description: "Branch or commit SHA to tag and publish when creating a manual release. Leave blank to use the workflow run commit."
         required: false
+
 permissions:
   contents: write
 
@@ -24,39 +25,86 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Resolve release metadata
-        id: meta
+      - name: Resolve release target
+        id: target
         shell: bash
         run: |
           if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]; then
-            TAG="${{ github.event.inputs.tag }}"
-            if [[ -z "$TAG" ]]; then
-              VERSION=$(grep -m1 '"version"' package.json | sed -E 's/.*"version": "([^"]+)".*/\1/')
-              TAG="v$VERSION"
-            fi
             TARGET="${{ github.event.inputs.target }}"
             if [[ -z "$TARGET" ]]; then
               TARGET="${GITHUB_SHA}"
             fi
           else
-            TAG="${GITHUB_REF_NAME}"
             TARGET="${GITHUB_SHA}"
           fi
 
-          VERSION="${TAG#v}"
+          echo "target=$TARGET" >> "$GITHUB_OUTPUT"
+
+      - name: Check out release target
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+        with:
+          ref: ${{ steps.target.outputs.target }}
+
+      - name: Resolve package metadata
+        id: meta
+        shell: bash
+        run: |
+          PACKAGE_NAME=$(node -p "JSON.parse(require('node:fs').readFileSync('package.json', 'utf8')).name")
+          PACKAGE_VERSION=$(node -p "JSON.parse(require('node:fs').readFileSync('package.json', 'utf8')).version")
+
+          if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]; then
+            TAG="${{ github.event.inputs.tag }}"
+            if [[ -z "$TAG" ]]; then
+              TAG="v$PACKAGE_VERSION"
+            fi
+          else
+            TAG="${GITHUB_REF_NAME}"
+          fi
+
+          EXPECTED_TAG="v$PACKAGE_VERSION"
+          if [[ "$TAG" != "$EXPECTED_TAG" ]]; then
+            echo "Release tag ($TAG) must match package.json version ($EXPECTED_TAG)." >&2
+            exit 1
+          fi
 
           {
+            echo "package_name=$PACKAGE_NAME"
+            echo "package_version=$PACKAGE_VERSION"
             echo "tag=$TAG"
-            echo "version=$VERSION"
-            echo "target=$TARGET"
           } >> "$GITHUB_OUTPUT"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+
+      - name: Publish package to npm
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          PACKAGE_NAME: ${{ steps.meta.outputs.package_name }}
+          PACKAGE_VERSION: ${{ steps.meta.outputs.package_version }}
+        shell: bash
+        run: |
+          if [[ -z "${NODE_AUTH_TOKEN}" ]]; then
+            echo "NPM_TOKEN secret is not configured." >&2
+            exit 1
+          fi
+
+          if npm view "${PACKAGE_NAME}@${PACKAGE_VERSION}" version > /dev/null 2>&1; then
+            echo "${PACKAGE_NAME}@${PACKAGE_VERSION} is already published."
+            exit 0
+          fi
+
+          npm publish
 
       - name: Create GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ steps.meta.outputs.tag }}
-          TARGET: ${{ steps.meta.outputs.target }}
-          VERSION: ${{ steps.meta.outputs.version }}
+          PACKAGE_NAME: ${{ steps.meta.outputs.package_name }}
+          PACKAGE_VERSION: ${{ steps.meta.outputs.package_version }}
+          TARGET: ${{ steps.target.outputs.target }}
         shell: bash
         run: |
           if gh release view "$TAG" > /dev/null 2>&1; then
@@ -66,10 +114,10 @@ jobs:
 
           NOTES=$(printf '%s\n' \
             '## Package' \
-            '- npm: https://www.npmjs.com/package/taiwanese-mandarin-translate-skill' \
+            "- npm: https://www.npmjs.com/package/$PACKAGE_NAME" \
             '' \
             '## Version' \
-            "- npm package version: $VERSION")
+            "- npm package version: $PACKAGE_VERSION")
 
           gh release create "$TAG" \
             --title "$TAG" \

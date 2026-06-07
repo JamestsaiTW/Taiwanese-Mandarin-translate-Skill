@@ -10,10 +10,8 @@ on:
         description: "Release tag, for example v0.1.0. Leave blank to use v<package.json version>."
         required: false
       target:
-        description: "Branch or commit SHA to tag when creating a manual release."
+        description: "Branch or commit SHA to tag when creating a manual release. Leave blank to use the workflow run commit."
         required: false
-        default: "main"
-
 permissions:
   contents: write
 

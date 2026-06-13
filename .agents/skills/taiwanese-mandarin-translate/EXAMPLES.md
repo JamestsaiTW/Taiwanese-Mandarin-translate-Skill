@@ -11,7 +11,7 @@ These examples show the default style this skill should aim for.
 | default Taiwanese Mandarin | This guide is written for readers in Taiwan. | 這份指南是為台灣讀者撰寫的。 |
 | more neutral public-facing register | This guide is written for readers in Taiwan. | 本指南為臺灣讀者撰寫。 |
 | default Taiwanese Mandarin | We built this feature for teams in Taiwan. | 我們為台灣團隊打造了這項功能。 |
-| more neutral public-facing register | We built this resource for residents in Taiwan. | 本資源提供臺灣居民使用。 |
+| more neutral public-facing register | We built this resource for residents in Taiwan. | 本資源供臺灣居民使用。 |
 
 ## UI copy
 

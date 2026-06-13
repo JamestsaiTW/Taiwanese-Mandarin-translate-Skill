@@ -45,7 +45,7 @@ For each case, translate or rewrite the source, then compare the result with the
 | Case | Source | Sample output | Expected qualities |
 | --- | --- | --- | --- |
 | MD-1 | `--target copilot` installs the skill for GitHub Copilot. | `--target copilot` 會為 GitHub Copilot 安裝這個 skill。 | Preserves CLI option and product name. |
-| MD-2 | - Upload a file\n- Review the error\n- Try again | - 上傳檔案\n- 檢查錯誤\n- 再試一次 | Preserves list structure; natural UI verbs. |
+| MD-2 | - Upload a file<br>- Review the error<br>- Try again | - 上傳檔案<br>- 檢查錯誤<br>- 再試一次 | Preserves list structure; natural UI verbs. |
 | MD-3 | Do not translate `user_id`, `{workspace}`, or https://example.com. | 請勿翻譯 `user_id`、`{workspace}` 或 https://example.com。 | Preserves identifier, placeholder, and URL. |
 
 ## Common failure checks

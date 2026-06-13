@@ -127,6 +127,7 @@ function assertRequiredFiles() {
   const requiredPaths = [
     path.join(skillSourceDir, "SKILL.md"),
     path.join(skillSourceDir, "EXAMPLES.md"),
+    path.join(skillSourceDir, "BENCHMARK.md"),
     path.join(skillSourceDir, "references", "vocabulary.md")
   ];
 

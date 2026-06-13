@@ -34,6 +34,7 @@ The standard file layout for this skill is:
 .agents/skills/taiwanese-mandarin-translate/
   SKILL.md
   EXAMPLES.md
+  BENCHMARK.md
   references/vocabulary.md
 ```
 
@@ -99,6 +100,7 @@ Use this skill when you need to:
 
 - `.agents/skills/taiwanese-mandarin-translate/SKILL.md`: main skill definition
 - `.agents/skills/taiwanese-mandarin-translate/EXAMPLES.md`: sentence-level examples
+- `.agents/skills/taiwanese-mandarin-translate/BENCHMARK.md`: representative cases for translation quality checks
 - `.agents/skills/taiwanese-mandarin-translate/references/vocabulary.md`: categorized Taiwan terminology reference
 - `scripts/install-skill.mjs`: cross-platform installer
 - `package.json`: CLI entry points and npm scripts

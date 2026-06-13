@@ -57,6 +57,7 @@
 .agents/skills/taiwanese-mandarin-translate/
   SKILL.md
   EXAMPLES.md
+  BENCHMARK.md
   references/vocabulary.md
 ```
 
@@ -122,6 +123,7 @@ node scripts/install-skill.mjs --uninstall --target all
 
 - `.agents/skills/taiwanese-mandarin-translate/SKILL.md`：主要的 skill 定義
 - `.agents/skills/taiwanese-mandarin-translate/EXAMPLES.md`：句子層級的範例
+- `.agents/skills/taiwanese-mandarin-translate/BENCHMARK.md`：翻譯品質檢查用的代表性案例
 - `.agents/skills/taiwanese-mandarin-translate/references/vocabulary.md`：分類整理的台灣用語參考
 - `scripts/install-skill.mjs`：跨平台安裝程式
 - `package.json`：CLI 入口與 npm scripts

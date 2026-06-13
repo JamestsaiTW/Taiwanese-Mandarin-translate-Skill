@@ -13,6 +13,16 @@ Use this skill when the task needs English content translated into **Traditional
 - When the content is **official, educational, public-facing, or meant for a broad Taiwan audience**, lean toward a more neutral **ROC Mandarin** register: standard, clear, and broadly accepted in Taiwan.
 - Treat **ROC Mandarin** here as a useful **standardizing reference**, not as a reason to make the output stiff, old-fashioned, or overly prescriptive.
 
+## Register decision rules
+
+Use the lightest register that fits the audience:
+
+1. **Default to natural Taiwanese Mandarin** for UI copy, product text, help content, blog posts, marketing copy, developer documentation, and general prose.
+2. **Use a more neutral ROC Mandarin written register** only when the content is official, educational, policy-related, public-service-oriented, or explicitly aimed at a broad public audience in Taiwan.
+3. **Do not over-formalize** ordinary product or technical content. Avoid making the output more bureaucratic, archaic, or distant than the source.
+4. **Keep project convention first**. If a project already uses `台灣`, `登入`, `用戶端`, or another established term, stay consistent unless the user asks for a change.
+5. **Use `臺` consistently** only when the source, project, or context is official, governmental, educational, or highly formal. Otherwise, follow the existing convention.
+
 ## What this skill borrows from ROC Mandarin
 
 A widely used definition frames ROC Mandarin as a Taiwan-wide standard variety of Modern Standard Chinese and a common language across different groups in Taiwan. Use those strengths in practice:
@@ -51,6 +61,8 @@ Follow this order when choosing wording:
 - Prefer wording that works as a **common Taiwan lingua franca** when the audience is broad or unspecified.
 - Use **臺**-forms where the source or context is official, governmental, educational, or highly formal; otherwise use the project's existing convention.
 - If the source is ambiguous and accuracy depends on context, ask a brief clarifying question first.
+- Preserve brands, product names, APIs, CLI options, code symbols, commands, file paths, URLs, placeholders, and variables exactly unless the user asks to translate them.
+- Avoid filler sentence patterns that sound translated, such as `進行...操作`, `對...進行`, `通過...來`, and unnecessary nominalizations.
 
 ## Quick Taiwan wording reference
 
@@ -84,7 +96,7 @@ Use these patterns by default for product copy and technical documentation:
 | settings | 設定 |
 | sidebar / dashboard | 側邊欄 / 控制台 |
 
-See `references/vocabulary.md` for a larger categorized reference and `EXAMPLES.md` for sentence-level examples.
+See `references/vocabulary.md` for a larger categorized reference, `EXAMPLES.md` for sentence-level examples, and `BENCHMARK.md` for quality spot-check cases.
 
 ## Register selection
 
@@ -123,6 +135,8 @@ Check for:
 - register drift: too colloquial for formal text, or too stiff for normal product copy
 - punctuation or spacing issues
 - broken placeholders, Markdown, or formatting
+- translated code identifiers, commands, URLs, file paths, or placeholders
+- inflated wording such as unnecessary `進行`, `操作`, `通過`, or `對...進行`
 
 ### 4. Polish
 
@@ -143,15 +157,29 @@ When the content falls into one of these areas, actively watch for common wordin
 
 Rewrite them into natural Taiwan usage when appropriate.
 
+## Avoid translated-sounding sentence patterns
+
+Prefer direct, natural Taiwan Mandarin sentence structure:
+
+| Avoid | Prefer |
+| --- | --- |
+| 對資料進行處理 | 處理資料 |
+| 進行設定操作 | 設定 |
+| 通過連結來取得檔案 | 透過連結取得檔案 |
+| 服務器返回的數據 | 伺服器回傳的資料 |
+| 提供對此功能的支持 | 支援這項功能 |
+
 ## Quality checklist
 
 - [ ] Meaning is accurate and complete.
 - [ ] Tone matches the source.
 - [ ] Wording sounds natural in Taiwan Mandarin.
 - [ ] Register fits the audience: Taiwanese Mandarin by default, neutral ROC Mandarin when needed.
+- [ ] The output is not more formal, stiff, or bureaucratic than the context requires.
 - [ ] No Simplified Chinese or China-specific vocabulary remains.
 - [ ] Terminology is consistent throughout.
 - [ ] Formatting, placeholders, and structure are preserved.
+- [ ] Code, commands, URLs, file paths, placeholders, and identifiers are preserved exactly.
 
 ## Response style
 
